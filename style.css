@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(16, 135, 156, 0.7);
+}
+
+.nav {
+  width: 100%;
+  height: 8vh;
+  background: -webkit-gradient(linear, left top, right top, from(#03012e), color-stop(65%, #10879c), to(#2db6d1));
+  background: linear-gradient(90deg, #03012e 0%, #10879c 65%, #2db6d1 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 10%;
+}
+
+.nav #nav_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.navlink {
+  padding: 0 10px;
+}
+
+.navlink a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+.navlink a :hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.navlink a ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: whitesmoke;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+#burger {
+  display: none;
+}
+
+#burgerContent {
+  display: none;
+}
+
+#burgerContent ul li {
+  list-style: none;
+}
+
+#burgerContent ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+section {
+  width: 100%;
+  height: 70vh;
+  background-image: url(img/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .titre {
+  width: 50%;
+  text-align: center;
+}
+
+section .titre h1 {
+  color: #adbaf5;
+  font-family: Verdana;
+  font-size: 4rem;
+}
+
+.parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parent h2 {
+  color: #cad3fa;
+  font-family: Verdana;
+}
+
+.parent .quisuije {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  border: 4px solid #054375;
+  -webkit-box-shadow: 0 4px 8px;
+          box-shadow: 0 4px 8px;
+  background-color: #cad3fa;
+  margin: 50px;
+  border-radius: 5px;
+}
+
+.parent .quisuije img {
+  width: 30%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.parent .quisuije p {
+  color: #10879c;
+  font-family: sans-serif;
+  padding: 6%;
+  line-height: 2em;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav #nav_list {
+    display: none;
+  }
+  .nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav .menu #burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 60px;
+    height: 60px;
+  }
+  .bg {
+    height: 40vh;
+  }
+  .parent h2 {
+    font-size: 35px;
+  }
+  .parent .quisuije {
+    width: 90%;
+  }
+  .parent .quisuije p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg {
+    height: 50vh;
+  }
+  .bg .titre {
+    width: 80%;
+    text-align: center;
+  }
+  .bg .titre h1 {
+    font-size: 50px;
+  }
+  .parent .quisuije {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 80%;
+  }
+  .parent .quisuije img {
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .bg .titre h1 {
+    font-size: 40px;
+  }
+  .parent h2 {
+    font-size: 25px;
+  }
+  .parent .quisuije p {
+    font-size: 18px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

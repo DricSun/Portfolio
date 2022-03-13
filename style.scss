@@ -1,0 +1,250 @@
+@import "scss/abstracts/variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $body_color;
+}
+
+.nav {
+    width: 100%;
+    height: 8vh;
+    background: $nav_gradient;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
+
+
+    #nav_list {
+        display: flex;
+        list-style: none;
+
+    }
+}
+
+
+        .navlink {
+            padding: 0 10px;
+
+            
+
+
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+                font-family: sans-serif;
+                   
+                :hover::after{
+                  transform: scale(1);
+                  
+                  
+                
+                }
+            
+
+                ::after{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1.5px;
+                    background: whitesmoke;
+                    transform: scale(0);
+                    transition: transform 0.3s ease-in-out ;
+
+                     
+                }
+                
+            
+
+
+               
+
+            }
+
+        }
+    
+
+    #burger {
+        display: none;
+    }
+    #burgerContent{
+        display: none;
+        
+        
+      
+        ul{
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+
+
+
+
+
+section {
+    width: 100%;
+    height: 70vh;
+    background-image: url(img/bg3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .titre {
+        width: 50%;
+        text-align: center;
+
+
+        h1 {
+            color: rgb(173, 186, 245);
+            font-family: Verdana;
+            font-size: 4rem;
+        }
+    }
+}
+
+.parent {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+
+
+
+    h2 {
+        color: $title;
+        font-family: Verdana;
+    }
+
+    .quisuije {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 60%;
+        height: auto;
+        border: 4px solid rgb(5, 67, 117);
+        box-shadow: 0 4px 8px;
+        background-color: rgb(202, 211, 250);
+        margin: 50px;
+        border-radius: 5px;
+
+        img {
+            width: 30%;
+            height: auto;
+            object-fit: cover;
+
+        }
+
+        p {
+            color: rgb(16, 135, 156);
+            font-family: sans-serif;
+            padding: 6%;
+            line-height: 2em;
+            font-size: 1.2rem;
+        }
+
+    }
+
+}
+
+
+@media screen and(max-width:1024px) {
+    .nav {
+
+        #nav_list {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+
+            #burger {
+                display: flex;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+    .bg {
+        height: 40vh;
+    }
+    .parent {
+        h2{
+            font-size: 35px;
+        }
+        .quisuije {
+            width: 90%;
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .bg {
+        height: 50vh;
+        .titre {
+            width: 80%;
+            text-align: center;
+
+            h1 {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .parent {
+
+        .quisuije {
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+
+            img {
+                width: 70%;
+                height: auto;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .bg {
+        .titre {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+    .parent {
+        h2{
+            font-size: 25px;
+        }
+
+        .quisuije {
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}

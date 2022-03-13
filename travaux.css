@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(16, 135, 156, 0.7);
+}
+
+.nav {
+  width: 100%;
+  height: 8vh;
+  background: linear-gradient(90deg, #03012e 0%, #10879c 65%, #2db6d1 100%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+.nav #nav_list {
+  display: flex;
+  list-style: none;
+}
+
+.navlink {
+  padding: 0 10px;
+}
+.navlink a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+.navlink a :hover::after {
+  transform: scale(1);
+}
+.navlink a ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: whitesmoke;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+#burger {
+  display: none;
+}
+
+#burgerContent {
+  display: none;
+}
+#burgerContent ul li {
+  list-style: none;
+}
+#burgerContent ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.titre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  padding: 100px;
+}
+.titre h2 {
+  color: #cad3fa;
+  font-family: Verdana;
+}
+
+.parentgrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parentgrid .grid {
+  display: grid;
+  max-width: 1000px;
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-rows: repeat(3, 5fr);
+  gap: 50px;
+}
+.parentgrid .grid .first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .first .linklight {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #0f7197;
+  border-radius: 20px;
+}
+.parentgrid .grid .second {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .second .linkdark {
+  width: 100%;
+  height: 100%;
+  border: solid 2px #3a3b3b;
+  border-radius: 20px;
+}
+.parentgrid .grid .third {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .third .register {
+  width: 100%;
+  height: auto;
+  border: solid 2px #066969;
+  border-radius: 20px;
+}
+.parentgrid .grid .fourth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .fourth .connect {
+  width: 100%;
+  height: auto;
+  border: solid 2px #00418b;
+  border-radius: 20px;
+}
+.parentgrid .grid .fifth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .fifth .dashboard {
+  width: 100%;
+  height: auto;
+  border: solid 2px #00418b;
+  border-radius: 20px;
+}
+.parentgrid .grid .sixth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+.parentgrid .grid .sixth .soon {
+  width: 100%;
+  height: auto;
+  border: solid 2px #00418b;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav #nav_list {
+    display: none;
+  }
+  .nav .menu {
+    display: flex;
+  }
+  .nav .menu #burger {
+    display: flex;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=travaux.css.map */

@@ -1,0 +1,422 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(16, 135, 156, 0.7);
+}
+
+.nav {
+  width: 100%;
+  height: 8vh;
+  background: linear-gradient(90deg, #03012e 0%, #10879c 65%, #2db6d1 100%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+.nav #nav_list {
+  display: flex;
+  list-style: none;
+}
+.nav #nav_list .navlink {
+  padding: 0 10px;
+}
+.nav #nav_list .navlink a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+.nav #nav_list .navlink a :hover::after {
+  transform: scale(1);
+}
+.nav #nav_list .navlink a ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: whitesmoke;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+.nav #burger {
+  display: none;
+}
+.nav #burgerContent {
+  display: none;
+}
+.nav #burgerContent ul li {
+  list-style: none;
+}
+.nav #burgerContent ul li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.grid {
+  max-width: 1400px;
+  height: 80%;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 500px);
+  grid-template-rows: repeat(9, 1fr);
+  background-color: rgba(20, 93, 177, 0.2);
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.grid .item1 {
+  grid-column: 2/3;
+  grid-row: 1/4;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.grid .item1 .html {
+  width: 150px;
+  height: 150px;
+}
+.grid .item2 {
+  grid-column: 1/2;
+  grid-row: 4/7;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.grid .item3 {
+  grid-column: 3/5;
+  grid-row: 4/7;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.grid .item3 .js {
+  width: 150px;
+  height: 150px;
+}
+.grid .item4 {
+  grid-column: 2/3;
+  grid-row: -4/-1;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+.grid .item4 .php {
+  width: 150px;
+  height: 150px;
+}
+.grid .item5 {
+  grid-column: 2/3;
+  grid-row: 4/7;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+.grid .item5 h2 {
+  color: #cad3fa;
+  font-family: Verdana;
+}
+
+.box {
+  background-color: rgba(255, 81, 0, 0.6);
+  padding: 1.5em;
+  width: auto;
+  display: none;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+.box svg {
+  height: 150px;
+  width: 150px;
+}
+.box svg circle {
+  fill: none;
+  stroke: #1d1c24;
+  stroke-width: 5px;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: circle 2s forwards;
+  stroke-linecap: round;
+}
+.box p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.box2 {
+  background-color: rgba(6, 87, 238, 0.7);
+  padding: 1.5em;
+  width: auto;
+  display: none;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+.box2 .svg2 {
+  height: 150px;
+  width: 150px;
+}
+.box2 .svg2 .circle2 {
+  fill: none;
+  stroke: #1d1c24;
+  stroke-width: 5px;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: circle 2s forwards;
+  animation-name: circle2;
+  stroke-linecap: round;
+}
+.box2 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.box3 {
+  background-color: rgba(208, 255, 0, 0.7);
+  padding: 1.5em;
+  width: auto;
+  display: none;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+.box3 .svg3 {
+  height: 150px;
+  width: 150px;
+}
+.box3 .svg3 .circle3 {
+  fill: none;
+  stroke: #1d1c24;
+  stroke-width: 5px;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: circle 2s forwards;
+  animation-name: circle3;
+  stroke-linecap: round;
+}
+.box3 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+.box4 {
+  background-color: rgba(165, 25, 200, 0.7);
+  padding: 1.5em;
+  width: auto;
+  display: none;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+}
+.box4 .svg4 {
+  height: 150px;
+  width: 150px;
+}
+.box4 .svg4 .circle4 {
+  fill: none;
+  stroke: #1d1c24;
+  stroke-width: 5px;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: circle 2s forwards;
+  animation-name: circle4;
+  stroke-linecap: round;
+}
+.box4 p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-family: sans-serif;
+}
+
+@keyframes circle {
+  to {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes circle2 {
+  to {
+    stroke-dashoffset: 190;
+  }
+}
+@keyframes circle3 {
+  to {
+    stroke-dashoffset: 290;
+  }
+}
+@keyframes circle4 {
+  to {
+    stroke-dashoffset: 245;
+  }
+}
+.second_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.second_section .grid2 {
+  display: grid;
+  width: 80%;
+  height: 40vh;
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: repeat(4, 2fr);
+  background-color: rgba(20, 93, 177, 0.2);
+  border-radius: 25px;
+}
+.second_section .grid2 .form {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_section .grid2 .form .html {
+  color: #cad3fa;
+  font-size: 1.8rem;
+}
+.second_section .grid2 .style_css {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_section .grid2 .style_css .css_style {
+  color: #cad3fa;
+  font-size: 1.8rem;
+}
+.second_section .grid2 .interractive {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_section .grid2 .interractive .css_anim {
+  color: #cad3fa;
+  font-size: 1.8rem;
+  font-family: sans-serif;
+}
+.second_section .grid2 .back {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_section .grid2 .back .backend {
+  color: #cad3fa;
+  font-size: 1.8rem;
+}
+.second_section .grid2 .parent_first_p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second_section .grid2 .parent_first_p .first_description {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.second_section .grid2 .parent_second_p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.second_section .grid2 .parent_second_p .second_description {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.second_section .grid2 .parent_third_p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.second_section .grid2 .parent_third_p .third_description {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.second_section .grid2 .parent_fourth_p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.second_section .grid2 .parent_fourth_p .fourth_description {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.second_section .titredetails {
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.second_section .titredetails .details {
+  color: #cad3fa;
+  font-family: Verdana;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav #nav_list {
+    display: none;
+  }
+  .nav .menu {
+    display: flex;
+  }
+  .nav .menu #burger {
+    display: flex;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/*# sourceMappingURL=competences.css.map */

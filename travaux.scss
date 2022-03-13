@@ -1,0 +1,228 @@
+@import "scss/abstracts/variables";
+        
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $body_color;
+}
+
+.nav {
+    width: 100%;
+    height: 8vh;
+    background: $nav_gradient;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10%;
+
+
+    #nav_list {
+        display: flex;
+        list-style: none;
+
+    }
+}
+
+
+        .navlink {
+            padding: 0 10px;
+
+            
+
+
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+                font-family: sans-serif;
+                   
+                :hover::after{
+                  transform: scale(1);
+                  
+                  
+                
+                }
+            
+
+                ::after{
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1.5px;
+                    background: whitesmoke;
+                    transform: scale(0);
+                    transition: transform 0.3s ease-in-out ;
+
+                     
+                }
+                
+            
+
+
+               
+
+            }
+
+        }
+    
+
+    #burger {
+        display: none;
+    }
+    #burgerContent{
+        display: none;
+        
+        
+      
+        ul{
+            li{
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    
+                    color: whitesmoke;
+                }
+            }
+        }
+    }
+
+
+    .titre{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        width: 100%;
+        padding: 100px;
+        h2{
+            color: $title;  
+            font-family: Verdana;
+        }
+    }
+
+.parentgrid{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    .grid{
+    display: grid;
+    max-width: 1000px;
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(3, 5fr);
+    gap: 50px;
+
+    .first{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        
+        
+
+        .linklight{
+            width: 100%;
+            height: 100%;
+            border: solid 2px rgb(15, 113, 151);
+            border-radius: 20px;
+         
+           
+        }
+    }
+    .second{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .linkdark{
+            width: 100%;
+            height: 100%;
+            border: solid 2px rgb(58, 59, 59);
+            border-radius: 20px;
+        }
+    }
+    .third{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .register{
+            width: 100%;
+            height: auto;
+            border: solid 2px rgb(6, 105, 105);
+            border-radius: 20px;
+        }
+    }
+    .fourth{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .connect{
+            width: 100%;
+            height: auto;
+            border: solid 2px rgb(0, 65, 139);
+            border-radius: 20px;
+        }
+    }
+    .fifth{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .dashboard{
+            width: 100%;
+            height: auto;
+            border: solid 2px rgb(0, 65, 139);
+            border-radius: 20px;
+        }
+    }
+    .sixth{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+
+        .soon{
+            width: 100%;
+            height: auto;
+            border: solid 2px rgb(0, 65, 139);
+            border-radius: 20px;
+        }
+    }
+}
+
+}
+
+
+@media screen and(max-width:1024px) {
+    .nav {
+
+        #nav_list {
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+
+            #burger {
+                display: flex;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+
+}
